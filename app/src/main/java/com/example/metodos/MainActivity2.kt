@@ -8,17 +8,17 @@ import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.metodos.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity2 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        binding.boton1.setOnClickListener {
-            Toast.makeText(this@MainActivity, binding.text.text, Toast.LENGTH_LONG).show()
-
+        val boton = findViewById<Button>(R.id.boton2)
+        val text2 = findViewById<EditText>(R.id.text2)
+        boton.setOnClickListener {
+            Toast.makeText(this@MainActivity2, text2.text.toString(), Toast.LENGTH_LONG).show()
         }
+
     }
 }
+
